@@ -9,6 +9,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "index.js": "0.0.3",
     "inquirer": "^6.3.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bfire23/good-readme-generator.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/bfire23/good-readme-generator/issues"
+  },
+  "homepage": "https://github.com/bfire23/good-readme-generator#readme"
 }
