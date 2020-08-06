@@ -12,17 +12,23 @@ function generateMarkdown(data) {
   * [License](#license)
   * [Questions](#questions)
   
-   
+  ## Description:
+    ${data.description}
+  
   ## Installation:
     ${data.installation}
-  ## Usage:
+  
+    ## Usage:
     ${data.usage}
-  ## Contributions:
+  
+    ## Contributions:
     ${data.contributions}
-  ## Tests:
+  
+    ## Tests:
     ${data.tests}
-  ## License:
-    
+  
+    ## License:
+     ${data.license}
     
   ## Questions:
     Please visit my GitHub page for any questions about the project. 

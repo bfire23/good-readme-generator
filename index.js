@@ -1,5 +1,5 @@
 const inquirer = require("inquirer");
-const util = require("util");
+// const util = require("util");
 const fs = require("fs");
 const generateMarkdown = require("./generateMarkdown");
 
@@ -71,13 +71,21 @@ inquirer.prompt(questions)
 
 .then(function(response) {
    const myData = generateMarkdown(response)
-   writeToFile("readme.md", myData)
+   writeToFile("README.md", myData)
   
   console.log(response);
 })
 // function to write README file
 function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, function(err) {
 
+    if (err) {
+      return console.log(err);
+    }
+  
+    console.log("Success!");
+  
+  });
   
 }
 
