@@ -21,6 +21,8 @@ function generateMarkdown(data) {
     ${data.contributions}
   ## Tests:
     ${data.tests}
+  ## License:
+    
     
   ## Questions:
     Please visit my GitHub page for any questions about the project. 
