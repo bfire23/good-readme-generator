@@ -1,6 +1,4 @@
-// function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+# undefined
   ![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
 
   # Table of Contents
@@ -14,37 +12,33 @@ function generateMarkdown(data) {
   * [Questions](#questions)
   
   ## Description:
-    ${data.description}
+    undefined
   
   ## Installation:
-    ${data.installation}
+    undefined
   
     ## Usage:
-    ${data.usage}
+    undefined
   
     ## Contributions:
-    ${data.contributions}
+    undefined
   
     ## Tests:
-    ${data.tests}
+    undefined
   
     ## License:
-     ${data.license}
+     undefined
      
     
   ## Questions:
     Please visit my GitHub page for any questions about the project. 
     Here is the link:
 
-    [GitHub profile](https://github.com/${data.username})
+    [GitHub profile](https://github.com/undefined)
 
-    If you have anymore questions, please email me at ${data.email}
-
-
+    If you have anymore questions, please email me at dsfd
 
 
 
-`;
-}
 
-module.exports = generateMarkdown;
+

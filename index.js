@@ -1,5 +1,4 @@
 const inquirer = require("inquirer");
-// const util = require("util");
 const fs = require("fs");
 const generateMarkdown = require("./generateMarkdown");
 
@@ -8,43 +7,43 @@ const questions = [
   {
     type: "input",
     message: "what is the title of your project?",
-    name: "Title"
+    name: "title"
   },
   {
     type: "input",
     message: "Please decrible your project?",
-    name: "Description",
+    name: "description",
 
   },
   {
     type: "input",
     message: "What are the steps required to install your project?",
-    name: "Installation",
+    name: "installation",
 
   },
-  
+
   {
     type: "input",
     message: "Provide instructions and examples for use.",
-    name: "Usage",
+    name: "usage",
 
   },
   {
     type: "input",
     message: "Who has contributed to this project?",
-    name: "Contributions",
+    name: "contributions",
 
   },
   {
     type: "input",
     message: "How do you test this project?",
-    name: "Tests",
+    name: "tests",
 
   },
   {
     type: "list",
     message: "choose a license",
-    name: "License",
+    name: "license",
     choices: [
       "GNU GPLv3",
       "MIT",
@@ -55,7 +54,7 @@ const questions = [
   {
     type: "input",
     message: "Please enter your GitHub username.",
-    name: "Username",
+    name: "username",
 
   },
   {
@@ -65,33 +64,41 @@ const questions = [
 
   }
 
-
 ];
 inquirer.prompt(questions)
+// console.log(questions)
 
-.then(function(response) {
-   const myData = generateMarkdown(response)
-   writeToFile("README.md", myData)
-  
-  console.log(response);
-})
-// function to write README file
-function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, function(err) {
+  .then(function (response) {
+    const myData = generateMarkdown(response);
+    console.log(response);
+    // console.log("myData: ", myData)
 
-    if (err) {
-      return console.log(err);
-    }
+    writeToFile("README.md", myData);
+    
+  })
   
-    console.log("Success!");
   
-  });
   
+  // function to write README file
+  function writeToFile(fileName, Data) {
+
+    fs.writeFile("README.md", Data, (err) => {
+      
+    
+      if (err) {
+        return console.log(err);
+      }
+    
+      console.log("Success!");
+    
+    });
+    
+
 }
-
 // function to initialize program
 function init() {
 
 }
+
 // function call to initialize program
 init();
